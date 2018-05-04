@@ -8,9 +8,12 @@
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Dashboard</a>
+      <a mat-list-item href="#">Cabin Door</a>
+      <a mat-list-item href="#">Critter Alert</a>
+      <a mat-list-item href="#">Boat Bot</a>
+      <a mat-list-item href="#">Data Visuals</a>
+      <a mat-list-item href="#">Settings</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +26,7 @@
         *ngIf="(isHandset | async)!.matches">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Application Title</span>
+      <span>Azure Afloat</span>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

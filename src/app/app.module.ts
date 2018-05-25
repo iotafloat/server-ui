@@ -9,7 +9,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { SignalKService } from "./signal-k.service";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSortModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [SignalKService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

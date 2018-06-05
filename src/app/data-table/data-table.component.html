@@ -3,15 +3,15 @@
 
     <!-- Body Column -->
     <ng-container matColumnDef="timestamp">
-      <mat-header-cell *matHeaderCellDef>Body</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>Time</mat-header-cell>
       <mat-cell *matCellDef="let update">{{update.timestamp}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="source">
-      <mat-header-cell *matHeaderCellDef>Updates</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.source}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef>Device</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.deviceName}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="values">
-      <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>Valued</mat-header-cell>
       <mat-cell *matCellDef="let update">{{update.values}}</mat-cell>
     </ng-container>
 

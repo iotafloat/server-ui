@@ -10,6 +10,6 @@ export class SignalKService {
   updates$ = this.deltaMessages$.pipe(
     filter(message=>'updates' in message),
     flatMap(message => message.updates),
-    map((update:any) => ({timestamp:update.timestamp, source:update.source.src, values:JSON.stringify(update.values)}))
+    map((update:any) => ({ timestamp:update.timestamp, deviceName:update.source.deviceName, values:JSON.stringify(update.values) }))
   )
 }

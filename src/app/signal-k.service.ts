@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-
-export interface DeltaMessage {
-  body: string;
-}
+import { filter,flatMap, map } from "rxjs/operators";
+import { webSocket } from 'rxjs/webSocket';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignalKService {
-
-  deltaMessages$:Subject<DeltaMessage> = new Subject<DeltaMessage>();
-
-  constructor() {
-    setInterval(() => {
-      this.deltaMessages$.next({ body: Math.random().toString() });
-    }, 2000);
-  }
+  deltaMessages$ = webSocket<any>('ws://localhost:3000/signalk/v1/stream?subscribe=all');
+  updates$ = this.deltaMessages$.pipe(
+    filter(message=>'updates' in message),
+    flatMap(message => message.updates),
+    map((update:any) => ({timestamp:update.timestamp, source:update.source.src, values:JSON.stringify(update.values)}))
+  )
 }

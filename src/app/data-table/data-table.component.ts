@@ -10,15 +10,13 @@ import { SignalKService } from "../signal-k.service";
 export class DataTableComponent implements OnInit {
   dataSource: DeltaDataSource;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['body'];
+  // Columns displayed in the table. Columns IDs can be added, removed, or reordered. 
+  displayedColumns = ['timestamp','source', 'values'];
 
   constructor(private signalKService:SignalKService) {
   }
   
   ngOnInit() {
     this.dataSource = new DeltaDataSource(this.signalKService);
-    console.log(this.dataSource);
-    // this.signalKService.deltaMessages$.subscribe(d => console.log(d.body));
   }
 }

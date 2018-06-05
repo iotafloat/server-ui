@@ -2,13 +2,20 @@
   <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
 
     <!-- Body Column -->
-    <ng-container matColumnDef="body">
+    <ng-container matColumnDef="timestamp">
       <mat-header-cell *matHeaderCellDef>Body</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.body}}</mat-cell>
+      <mat-cell *matCellDef="let update">{{update.timestamp}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="source">
+      <mat-header-cell *matHeaderCellDef>Updates</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.source}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="values">
+      <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.values}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-row *matRowDef="let update; columns: displayedColumns;"></mat-row>
   </mat-table>
-
 </div>

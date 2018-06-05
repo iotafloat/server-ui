@@ -2,25 +2,21 @@ import { DataSource } from '@angular/cdk/collections';
 import { Observable, Subject } from 'rxjs';
 import { SignalKService } from "../signal-k.service";
 
-// TODO: Replace this with your own data model type
-export interface DeltaMessage {
-  body: string;
-}
 
-export class DeltaDataSource extends DataSource<DeltaMessage> {
-  deltaMessages: DeltaMessage[] = [{ body: "one" }];
-  deltaMessages$: Subject<DeltaMessage[]> = new Subject<DeltaMessage[]>();
+export class DeltaDataSource extends DataSource<any> {
+  updatesArray: any[]=[];
+  updates$: Subject<any[]> = new Subject<any[]>();
 
   constructor(private signalKService: SignalKService) {
     super();
-    this.signalKService.deltaMessages$.subscribe(d => {
-      this.deltaMessages.push(d);
-      this.deltaMessages$.next(this.deltaMessages);
+    this.signalKService.updates$.subscribe((d:any) => {
+      this.updatesArray.push(d);
+      this.updates$.next(this.updatesArray);
     });
   }
 
-  connect(): Observable<DeltaMessage[]> {
-    return this.deltaMessages$;
+  connect(): Observable<any[]> {
+    return this.updates$;
   }
 
   disconnect() { }

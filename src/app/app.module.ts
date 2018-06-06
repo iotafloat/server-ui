@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core' 
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SignalKService } from "./signal-k.service";
     MatExpansionModule
   ],
   providers: [SignalKService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

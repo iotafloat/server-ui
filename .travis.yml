@@ -1,13 +1,10 @@
 language: node_js
 node_js:
   - "lts/*"
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-
-  # before_install:
-#   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+addons:
+  sauce_connect:
+    username: "roland23"
+    access_key: "07fff296-d6de-4137-920a-801d82468aac"
 install:
   - npm install
 script:

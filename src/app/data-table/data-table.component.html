@@ -1,20 +1,22 @@
 <div class="mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
-
     <!-- Body Column -->
     <ng-container matColumnDef="timestamp">
       <mat-header-cell *matHeaderCellDef>Time</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.timestamp}}</mat-cell>
+      <mat-cell *matCellDef="let update">{{update.timestamp|date:'long'}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="source">
-      <mat-header-cell *matHeaderCellDef>Device</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.deviceName}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef>Updates</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.source|uppercase}}</mat-cell>
     </ng-container>
-    <ng-container matColumnDef="values">
-      <mat-header-cell *matHeaderCellDef>Valued</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.values}}</mat-cell>
+    <!-- <ng-container matColumnDef="path">
+      <mat-header-cell *matHeaderCellDef>Path</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.path|titlecase}}</mat-cell>
+    </ng-container> -->
+    <ng-container matColumnDef= "values" >
+      <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+      <mat-cell *matCellDef="let update">{{update.path|titlecase}}: {{update.values}}</mat-cell>
     </ng-container>
-
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let update; columns: displayedColumns;"></mat-row>
   </mat-table>

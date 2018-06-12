@@ -11,13 +11,15 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
+import { WindRoseComponent } from './wind-rose/wind-rose.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     DashboardComponent,
-    DataTableComponent
+    DataTableComponent,
+    WindRoseComponent
   ],
   imports: [
     BrowserModule,

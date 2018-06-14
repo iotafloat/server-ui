@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SignalKService } from "../signal-k.service";
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 
-export class DashboardComponent {}
+export class DashboardComponent {
+  outsideTemperature$ = this.signalKService.filterByDatapoint$('environment/outside/temperature')
+  outsideHumidity$ = this.signalKService.filterByDatapoint$('environment/outside/humidity')
+  
+  constructor(private signalKService:SignalKService){}
+
+}
 

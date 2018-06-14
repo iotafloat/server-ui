@@ -13,7 +13,15 @@ export class SignalKService {
     flatMap(message => message.updates),
     map((update: any):Update => ({ timestamp: update.timestamp, deviceName: update.source.deviceName, values:update.values[0].value, path:update.values[0].path }))
   )
+
+  filterByDatapoint$(datapoint:string) {
+    return this.updates$.pipe(
+        filter(u => u.path == datapoint),
+        map(u => u.values)
+      )
+  }
 }
+
 
 export interface Update {
   timestamp:string,

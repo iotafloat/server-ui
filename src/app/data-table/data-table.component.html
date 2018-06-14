@@ -10,13 +10,10 @@
       <mat-header-cell *matHeaderCellDef>Updates</mat-header-cell>
       <mat-cell *matCellDef="let update">{{update.source|uppercase}}</mat-cell>
     </ng-container>
-    <!-- <ng-container matColumnDef="path">
-      <mat-header-cell *matHeaderCellDef>Path</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.path|titlecase}}</mat-cell>
-    </ng-container> -->
+
     <ng-container matColumnDef= "values" >
       <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
-      <mat-cell *matCellDef="let update">{{update.path|titlecase}}: {{update.values}}</mat-cell>
+      <mat-cell *matCellDef="let update">{{update.path}}: {{update.values}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

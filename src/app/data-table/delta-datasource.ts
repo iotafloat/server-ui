@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { scan } from 'rxjs/operators';
 import { SignalKService, Update } from "../signal-k.service";
 

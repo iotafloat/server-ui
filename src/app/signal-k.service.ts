@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
-import { filter, flatMap, map, scan } from "rxjs/operators";
+import { filter, flatMap, map } from "rxjs/operators";
 import { webSocket } from 'rxjs/webSocket';
 
 @Injectable({
@@ -11,12 +11,13 @@ export class SignalKService {
   updates$:Observable<Update> = this.deltaMessages$.pipe(
     filter(message => 'updates' in message),
     flatMap(message => message.updates),
-    map((update: any):Update => ({ timestamp: update.timestamp, deviceName: update.source.deviceName, values: JSON.stringify(update.values) }))
+    map((update: any):Update => ({ timestamp: update.timestamp, deviceName: update.source.deviceName, values:update.values[0].value, path:update.values[0].path }))
   )
 }
 
 export interface Update {
   timestamp:string,
   deviceName:string,
-  values:string
+  values:string,
+  path:string
 }

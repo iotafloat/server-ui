@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SignalKService } from "../signal-k.service";
+import { WindRoseComponent } from "../wind-rose/wind-rose.component";
 
 @Component({
   // tslint:disable-next-line:component-selector

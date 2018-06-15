@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { SignalKService } from '../signal-k.service';
+import { map } from "rxjs/operators";
 
 @Component({
-  selector: 'app-wind-rose',
+  selector: 'wind-rose',
   templateUrl: './wind-rose.component.html',
   styleUrls: ['./wind-rose.component.css']
 })
 export class WindRoseComponent implements OnInit {
+  windDirection$ = this.signalKService.filterByDatapoint$('environment/wind/directionTrue').pipe(
+    map(v => `rotate(${(v?v:0)}deg)`)
+  );
 
   constructor(private signalKService: SignalKService) {
-    
-    this.signalKService.up
-
   }
 
   ngOnInit() {

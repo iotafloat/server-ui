@@ -57,83 +57,141 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content" style="text-align:left;">
           <mat-accordion>
+            <mat-expansion-panel expanded="false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Diagram
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <vessel-diagram></vessel-diagram>
+              </ng-template>
+            </mat-expansion-panel>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Cockpit
+                  Cockpit
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
                 <table>
-                  <tr><td>Outside Temperature</td><td>{{outsideTemperature$|async}}</td></tr>
-                  <tr><td>Outside Humidity</td><td>{{outsideHumidity$|async}}</td></tr>
-                </table> 
-              </ng-template>
-            </mat-expansion-panel>
-          
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Engine Compartment 
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
-              </ng-template>
-            </mat-expansion-panel>
-          
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Mast Head
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
-              </ng-template>
-            </mat-expansion-panel>
-          
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Master Stateroom
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
-              </ng-template>
-            </mat-expansion-panel>
-          
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Aft Stateroom Port
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
-              </ng-template>
-            </mat-expansion-panel>
-          
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Aft Stateroom Starboard
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                  <tr>
+                    <td>Outside Temperature</td>
+                    <td>{{outsideTemperature$|async}}</td>
+                  </tr>
+                  <tr>
+                    <td>Outside Humidity</td>
+                    <td>{{outsideHumidity$|async}}</td>
+                  </tr>
+                </table>
               </ng-template>
             </mat-expansion-panel>
 
-            <mat-expansion-panel >
+            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Battery Compartment
+                  Engine Compartment
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Battery Diagnostic</th></tr><tr><td>OK</td></tr></table> 
+                <table>
+                  <tr>
+                    <th>Temperature</th>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </ng-template>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Mast Head
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr>
+                    <th>Temperature</th>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </ng-template>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Master Stateroom
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr>
+                    <th>Temperature</th>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </ng-template>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Aft Stateroom Port
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr>
+                    <th>Temperature</th>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </ng-template>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Aft Stateroom Starboard
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr>
+                    <th>Temperature</th>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </ng-template>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Battery Compartment
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr>
+                    <th>Battery Diagnostic</th>
+                  </tr>
+                  <tr>
+                    <td>OK</td>
+                  </tr>
+                </table>
               </ng-template>
             </mat-expansion-panel>
           </mat-accordion>

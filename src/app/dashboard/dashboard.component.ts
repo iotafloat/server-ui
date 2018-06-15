@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SignalKService } from "../signal-k.service";
+import { VesselDiagramComponent } from "../vessel-diagram/vessel-diagram.component";
 
 @Component({
   // tslint:disable-next-line:component-selector

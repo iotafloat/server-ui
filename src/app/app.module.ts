@@ -11,13 +11,15 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
+import { VesselDiagramComponent } from './vessel-diagram/vessel-diagram.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     DashboardComponent,
-    DataTableComponent
+    DataTableComponent,
+    VesselDiagramComponent
   ],
   imports: [
     BrowserModule,

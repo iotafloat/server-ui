@@ -1,3 +1,29 @@
 .vessel-diagram {
-    width:300px;
+    width:180px;
+}
+
+.vessel-diagram #zones * {
+    fill:none;
+}
+
+.vessel-diagram #zones .alert {
+    fill:red;
+    fill-opacity:0.20;
+}
+
+.vessel-diagram #zones .good {
+    fill:green;
+    fill-opacity:0.20;
+}
+
+.vessel-diagram #devices {
+    fill:white;
+}
+
+.vessel-diagram #devices .alert {
+    fill:red;
+}
+
+.vessel-diagram #devices .good {
+    fill:green;
 }

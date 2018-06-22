@@ -21,8 +21,6 @@ export class SignalKService {
       )
   }
 }
-
-
 export interface Update {
   timestamp:string,
   deviceName:string,

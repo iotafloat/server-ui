@@ -12,6 +12,7 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
 import { WindRoseComponent } from './wind-rose/wind-rose.component';
+import { VesselDiagramComponent } from './vessel-diagram/vessel-diagram.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WindRoseComponent } from './wind-rose/wind-rose.component';
     SidenavComponent,
     DashboardComponent,
     DataTableComponent,
-    WindRoseComponent
+    WindRoseComponent,
+    VesselDiagramComponent
   ],
   imports: [
     BrowserModule,

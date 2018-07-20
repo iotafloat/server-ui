@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { resolve } from 'dns';
 
 @Component({
   selector: 'vessel-diagram',

@@ -19,3 +19,8 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+.speed {
+  font-size: 20pt;
+  color:red;
+}

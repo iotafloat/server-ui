@@ -24,6 +24,7 @@ export class DashboardComponent {
   houseCurrent$=this.signalKService.filterByDatapoint$('electrical/batteries/house/temperature');
   starterCurrent$=this.signalKService.filterByDatapoint$('electrical/batteries/starter/temperature');
   engineInsideTemperature$=this.signalKService.filterByDatapoint$('environment/inside/temperature');
+  speedOverGround$=this.signalKService.filterByDatapoint$('navigation.speedOverGround');
 
   constructor(private signalKService:SignalKService){}
 

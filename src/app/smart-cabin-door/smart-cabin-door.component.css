@@ -1,12 +1,12 @@
 
-.child {
-        display: flex;
-        float: left;
-        flex-flow: row wrap;
-    }
+/* .child 
+{
+    display: flex;
+    float: left;
+    flex-flow: row wrap;
+}
     
-
-.grankid {
+.grandkid {
     align-content: space-around;
     margin:40px;
     width:100px;
@@ -15,20 +15,53 @@
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-}
-.child1 {
-    display: flex;
-    float: left;
-    flex-flow: row wrap;
-}
-.grandkid {
-   align-content: space-around;
-    margin:40px;
-    width:100px;
-    height:100px;
-    border:solid 1px gray;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
-} 
+}  */
 
+hr {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+ }
+
+h1 
+{
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+
+.person-card
+{
+    max-width: 400px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    tab-size: "0";
+}
+
+.header-img
+{
+    background-size: cover; 
+}
+
+.test-card
+{
+    max-width: 400px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.test-header-img
+{
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+}

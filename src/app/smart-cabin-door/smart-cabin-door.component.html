@@ -1,11 +1,77 @@
 <div>
-  <h1>Non-Verified</h1>
-  <div class= "child" *ngFor="let nonverified of [1,2,3,4]">
-    <div class="grankid">{{nonverified}}</div>
-  </div>
-  <!-- <h1>Verified</h1>
-  <div class="child1" *ngFor="let verified of [1,2,3,4]">
-    <div class="grandkid"> {{verified}}</div>
+  <h1>Authorized Users</h1>
+  <!-- <div class = "child" *ngFor = "let authorized of [1,2,3,4]">
+    <div class = "grandkid">{{authorized}}</div>
   </div> -->
+  <div>
+      <mat-card class = "person-card">
+        <mat-card-header>
+          <div mat-card-avatar class = "header-img"></div>
+          <mat-card-title>Gal Gadot</mat-card-title>
+          <mat-card-subtitle>Wonder Woman</mat-card-subtitle>
+        </mat-card-header>
+        <img src = "../../../../device-node/celebrities/galgadot1.jpg">
+        <!-- <img src = "C:\Users\Julia\Desktop\AzureAfloat\device-node\celebrities\galgadot1.jpg"> -->
+        <mat-card-content>
+          <p>
+            Gal Gadot is rad!
+            This is a little bio about her. Isn't that cool? Wonder Woman is always welcome here.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button href="galgadotfaces">Faces</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
+</div>
+
+<hr>
+
+<div>
+  <h1>Non-Authorized</h1>
+  <!-- <div class= "child" *ngFor="let nonauthorized of [1,2,3,4]">
+    <div class="grandkid">{{nonauthorized}}</div>
+  </div> -->
+  <mat-card class = "person-card">
+      <mat-card-header>
+        <div mat-card-avatar class = "header-img"></div>
+        <mat-card-title>Michael Fassbender</mat-card-title>
+        <mat-card-subtitle>Magneto</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src = "C:\Users\Julia\Desktop\AzureAfloat\device-node\celebrities\michaelfassbender1.jpg">
+      <mat-card-content>
+        <p>
+          Michael Fassbender is known for portraying Magneto in the X-Men movies. 
+          He's not authorized to enter the boat because Magneto is a villain!
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="michaelfassbenderfaces">Faces</a>
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+<hr>
+
+<div>
+  <h1>Test Doge</h1>
+  <mat-card class = "test-card">
+    <mat-card-header>
+      <div mat-card-avatar class = "test-header-img"></div>
+      <mat-card-title>Test Doggo</mat-card-title>
+      <mat-card-subtitle>Just a test</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src = "https://material.angular.io/assets/img/examples/shiba2.jpg">
+    <mat-card-content>
+      <p>
+        This is a test woofer's test card. I am going to put information about the floof right in here.
+        Let's see just how this looks, why don't we? 
+        HTML and CSS are fun!
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Faces</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

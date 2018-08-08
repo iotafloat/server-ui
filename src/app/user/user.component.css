@@ -1,0 +1,14 @@
+.face-card {
+  border: solid 1px red;
+  margin: 10px;
+}
+
+.face-card .thumbnail {
+  width:180px;
+}
+
+:host{
+  border: solid 1px blue;
+  padding: 5px;
+}
+

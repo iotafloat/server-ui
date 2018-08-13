@@ -13,6 +13,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
 import { WindRoseComponent } from './wind-rose/wind-rose.component';
 import { VesselDiagramComponent } from './vessel-diagram/vessel-diagram.component';
+import { SmartCabinDoorComponent } from './smart-cabin-door/smart-cabin-door.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './user/user.component';
+import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { VesselDiagramComponent } from './vessel-diagram/vessel-diagram.componen
     DashboardComponent,
     DataTableComponent,
     WindRoseComponent,
-    VesselDiagramComponent
+    VesselDiagramComponent,
+    SmartCabinDoorComponent,
+    UsersComponent,
+    UserComponent,
+    UserThumbnailComponent
   ],
   imports: [
     BrowserModule,

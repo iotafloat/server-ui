@@ -1,0 +1,11 @@
+.face-card {
+  border: solid 1px red;
+  margin: 10px;
+}
+
+.face-card .thumbnail {
+  width: 300px;
+  height: 353px;
+  object-fit: cover;
+}
+

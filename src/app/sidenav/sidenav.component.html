@@ -6,14 +6,12 @@
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar color="primary"><img src = '../../assets/azafnoname.png' height="60" width="60" style="margin-left:-15px; margin-right: 5px; ">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="dashboard">Dashboard</a>
-      <a mat-list-item href="#">Cabin Door</a>
-      <a mat-list-item href="#">Critter Alert</a>
-      <a mat-list-item href="#">Boat Bot</a>
+      <a mat-list-item href="cabindoor">Smart Cabin Door</a>
       <a mat-list-item href="data">Data Visuals</a>
-      <a mat-list-item href="#">Settings</a>
+      <!-- <a mat-list-item href="#">Settings</a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -28,6 +26,9 @@
       </button>
       <span>Azure Afloat</span>
     </mat-toolbar>
+
+    <!-- main page content goes here in the router-outlet -->
     <router-outlet></router-outlet>
+
   </mat-sidenav-content>
 </mat-sidenav-container>

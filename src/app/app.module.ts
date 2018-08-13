@@ -11,13 +11,25 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SignalKService } from "./signal-k.service";
+import { WindRoseComponent } from './wind-rose/wind-rose.component';
+import { VesselDiagramComponent } from './vessel-diagram/vessel-diagram.component';
+import { SmartCabinDoorComponent } from './smart-cabin-door/smart-cabin-door.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './user/user.component';
+import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     DashboardComponent,
-    DataTableComponent
+    DataTableComponent,
+    WindRoseComponent,
+    VesselDiagramComponent,
+    SmartCabinDoorComponent,
+    UsersComponent,
+    UserComponent,
+    UserThumbnailComponent
   ],
   imports: [
     BrowserModule,

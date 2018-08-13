@@ -16,31 +16,10 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          speed <div class="speed">{{speedOverGround$|async|number:'1.2-2'}}</div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-
-    <mat-grid-tile colspan="1" rowspan="1">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            Information
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-
     <mat-grid-tile colspan="1" rowspan="2">
       <mat-card class="dashboard-card">
         <mat-card-header>
@@ -57,76 +36,125 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content" style="text-align:left;">
           <mat-accordion>
+            <mat-expansion-panel expanded="false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Diagram
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <vessel-diagram></vessel-diagram>
+              </ng-template>
+            </mat-expansion-panel>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Cockpit
+                  Cockpit
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr>
+                    <td>Outside Temperature</td>
+                    <td>{{outsideTemperature$|async}}</td>
+                  </tr>
+                  <tr>
+                    <td>Outside Humidity</td>
+                    <td>{{outsideHumidity$|async}}</td>
+                  </tr>
+                </table>
               </ng-template>
             </mat-expansion-panel>
-          
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Engine Compartment
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <table>
+                  <tr><td>Inside Temperature</td><td>{{engineInsideTemperature$|async}}</td></tr>
+                  <tr><td>Coolant Temperature</td><td>{{coolantTemperature$|async }}</td></tr>
+                  <tr><td>Intake Mainfold Temperature</td><td>{{intakeManifoldTemperature$|async}}</td></tr>
+                </table>  
+              </ng-template>
+            </mat-expansion-panel>
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Engine Room
+                  Mast Head
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr><td>Outside Temperature</td><td>{{outsideTemperature$|async}}</td></tr> 
+                  <tr><td>Outside Humidity</td><td>{{outsideHumidity$|async}}</td></tr>
+                  <tr><td>Wind Speed</td><td>{{windSpeedApparent$|async}}</td></tr> 
+                  <tr><td>Wind Direction</td><td>{{windDirectionTrue$|async}}</td></tr>
+                </table> 
               </ng-template>
             </mat-expansion-panel>
-          
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Mast Head
+                  Master Stateroom
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr><td>Temperature</td><td>{{outsideTemperature$|async}}</td></tr>
+                  <tr><td>Humidity</td><td>{{outsideHumidity$|async}}</td></tr>
+                </table> 
               </ng-template>
             </mat-expansion-panel>
-          
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Master Stateroom
+                  Aft Stateroom Port
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr><td>Temperature</td><td>{{outsideTemperature$|async}}</td></tr>
+                  <tr><td>Humidity</td><td>{{outsideHumidity$|async}}</td></tr>
+                </table> 
               </ng-template>
             </mat-expansion-panel>
-          
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Aft Stateroom Port
+                  Aft Stateroom Starboard
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr><td>Temperature</td><td>{{outsideTemperature$|async}}</td></tr>
+                  <tr><td>Humidity</td><td>{{outsideHumidity$|async}}</td></tr>
+                </table> 
               </ng-template>
             </mat-expansion-panel>
-          
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                 Aft Stateroom Starboard
+                  Battery Compartment
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-                <table><tr><th>Temperature</th></tr><tr><td>70</td></tr></table> 
+                <table>
+                  <tr><td>House Battery Current</td><td>{{houseCurrent$|async}}</td></tr>
+                  <tr><td>House Battery Voltage</td><td>{{houseVoltage$|async}}</td></tr>
+                  <tr><td>House Battery Temperature</td><td>{{houseTemperature$|async}}</td></tr>
+                  <tr><td>Starter Battery Current</td><td>{{starterCurrent$|async}}</td></tr>
+                  <tr><td>Starter Battery Voltage</td><td>{{starterVoltage$|async}}</td></tr>
+                  <tr><td>Starter Battery Temperature</td><td>{{starterTemperature$|async}}</td></tr>
+                </table> 
               </ng-template>
             </mat-expansion-panel>
           </mat-accordion>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="dashboard-card">
         <mat-card-header>
@@ -142,7 +170,9 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div>
+            <wind-rose></wind-rose>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

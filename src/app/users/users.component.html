@@ -1,5 +1,4 @@
 <!-- Component for the list of users on the main Cabin door page -->
-
-<div *ngFor="let user of usersService.users">
-    <a href="user/{{user.name}}"><user-thumbnail [user]="user"></user-thumbnail></a>
+<div class="faces"  *ngFor="let user of usersService.users">
+    <a class="faces" href="user/{{user.name}}"><user-thumbnail [user]="user" class="use"></user-thumbnail></a>
 </div>

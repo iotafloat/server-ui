@@ -6,11 +6,8 @@
 }
 
 .face-card .thumbnail {
-  width:180px;
-}
-
-:host{
-  border: solid 1px blue;
-  padding: 5px;
+  width: 300px;
+  height: 353px;
+  object-fit: cover;
 }
 

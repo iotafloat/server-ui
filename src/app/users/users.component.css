@@ -1,7 +1,7 @@
 /* Component for the list of users on the main Cabin door page */
 
 :host {
-  border: solid 1px green;
   display: flex;
   flex-wrap: wrap;
 }
+

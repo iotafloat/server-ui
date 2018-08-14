@@ -1,3 +1,5 @@
+// Component for a list of faces associated with a person
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../users.service';

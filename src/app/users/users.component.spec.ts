@@ -1,3 +1,5 @@
+// Component for the list of users on the main Cabin door page
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersComponent } from './users.component';

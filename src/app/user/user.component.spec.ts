@@ -1,3 +1,5 @@
+// Component for a list of faces associated with a person
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserComponent } from './user.component';

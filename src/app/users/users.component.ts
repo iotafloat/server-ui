@@ -1,3 +1,5 @@
+// Component for the list of users on the main Cabin door page
+
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 

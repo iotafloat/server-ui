@@ -1,3 +1,5 @@
+// Component for a user card on the Cabin Door main page
+
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({

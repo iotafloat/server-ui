@@ -1,3 +1,5 @@
+// Component for a user card on the Cabin Door main page
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserThumbnailComponent } from './user-thumbnail.component';

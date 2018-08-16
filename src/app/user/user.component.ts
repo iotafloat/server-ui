@@ -2,7 +2,8 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UsersService } from '../users.service';
+import { UsersService} from '../users.service';
+
 
 @Component({
   selector: 'user',
@@ -15,7 +16,6 @@ export class UserComponent implements OnInit {
   private sub: any;
 
   constructor(private route: ActivatedRoute, private usersService: UsersService) { }
-
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       if (params['name']) {

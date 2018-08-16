@@ -10,8 +10,12 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 export class UserThumbnailComponent implements OnInit {
   @Input()
   user;
-
-  constructor() { }
+  slider = true;
+  onChange(event) {
+    if (event.checked === true) {
+      this.slider = false;
+    }
+  };
 
   ngOnInit() {
   }

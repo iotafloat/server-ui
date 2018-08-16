@@ -17,6 +17,7 @@ import { SmartCabinDoorComponent } from './smart-cabin-door/smart-cabin-door.com
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.componen
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSlideToggleModule
   ],
   providers: [SignalKService],
   bootstrap: [AppComponent]

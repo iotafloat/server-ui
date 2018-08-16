@@ -11,8 +11,11 @@
     <p>
       The face of {{user.name}}
     </p>
+    <mat-slide-toggle
+    [checked]="device"
+    ([slidder])="onChange(event)"
+      >
+      Authorized to open cabin door
+    </mat-slide-toggle>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>DELETE</button>
-  </mat-card-actions>
 </mat-card>

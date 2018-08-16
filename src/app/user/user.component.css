@@ -1,5 +1,14 @@
 /* Component for a list of faces associated with a person */
 
+h1{
+  margin-left: 1%;
+}
+
+.mat-raised-button{
+  margin-left: 1%;
+  border: solid 1px orange;
+}
+
 .face-card {
   border: solid 1px red;
   margin: 10px;
@@ -9,5 +18,24 @@
   width: 300px;
   height: 353px;
   object-fit: cover;
+}
+
+.add-face{
+  width: 300px;
+  height: 300px;
+
+  border: solid 1px violet;
+  margin: 10px;
+}
+
+.add-face .mat-fab{
+  object-fit: cover;
+  margin-top: 100px;
+  margin-left: 120px;
+  /* shape-margin: 100px */
+} 
+
+.add-face .mat-card-header{
+  margin-left: 60px;
 }
 

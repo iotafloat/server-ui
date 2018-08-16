@@ -17,12 +17,22 @@ export class UsersService {
     },
     {
       name: "Oscar Isaac",
-      subtitle: "Whatever",
+      subtitle: "Poe Dameron",
       images: [
         "oscarisaac1.jpg",
         "oscarisaac2.jpg",
         "oscarisaac3.jpg",
         "oscarisaac4.jpg",
+      ]
+    },
+    {
+      name: "Janelle Monae",
+      subtitle: "Singer",
+      images: [
+        "janellemonae1.jpg",
+        "janellemonae2.jpg",
+        "janellemonae3.jpg",
+        "janellemonae4.jpg",
       ]
     }
   ];

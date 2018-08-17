@@ -11,22 +11,22 @@ import { VesselDiagramComponent } from "../vessel-diagram/vessel-diagram.compone
 })
 
 export class DashboardComponent {
-  outsideTemperature$ = this.signalKService.filterByDatapoint$('environment/outside/temperature');
-  outsideHumidity$ = this.signalKService.filterByDatapoint$('environment/outside/humidity');
-  coolantTemperature$ =this.signalKService.filterByDatapoint$('propulsion/mainEngine/coolantTemperature');
-  intakeManifoldTemperature$=this.signalKService.filterByDatapoint$('propulsion/mainEngine/intakeManifoldTemperature');
-  windDirectionTrue$=this.signalKService.filterByDatapoint$('environment/wind/directionTrue');
-  windSpeedApparent$=this.signalKService.filterByDatapoint$('environment/wind/speedApparent');
-  houseVoltage$=this.signalKService.filterByDatapoint$('electrical/batteries/house/voltage');
-  starterVoltage$=this.signalKService.filterByDatapoint$('electrical/batteries/starter/voltage');
-  houseTemperature$=this.signalKService.filterByDatapoint$('electrical/batteries/house/current');
-  starterTemperature$=this.signalKService.filterByDatapoint$('electrical/batteries/starter/current');
-  houseCurrent$=this.signalKService.filterByDatapoint$('electrical/batteries/house/temperature');
-  starterCurrent$=this.signalKService.filterByDatapoint$('electrical/batteries/starter/temperature');
-  engineInsideTemperature$=this.signalKService.filterByDatapoint$('environment/inside/temperature');
-  speedOverGround$=this.signalKService.filterByDatapoint$('navigation.speedOverGround');
+  outsideTemperature$ = this.signalKService.filterByDatapoint$('environment_outside_temperature');
+  outsideHumidity$ = this.signalKService.filterByDatapoint$('environment_outside_humidity');
+  coolantTemperature$ = this.signalKService.filterByDatapoint$('propulsion_mainEngine_coolantTemperature');
+  intakeManifoldTemperature$ = this.signalKService.filterByDatapoint$('propulsion_mainEngine_intakeManifoldTemperature');
+  windDirectionTrue$ = this.signalKService.filterByDatapoint$('environment_wind_directionTrue');
+  windSpeedApparent$ = this.signalKService.filterByDatapoint$('environment_wind_speedApparent');
+  houseVoltage$ = this.signalKService.filterByDatapoint$('electrical_batteries_house_voltage');
+  starterVoltage$ = this.signalKService.filterByDatapoint$('electrical_batteries_starter_voltage');
+  houseTemperature$ = this.signalKService.filterByDatapoint$('electrical_batteries_house_current');
+  starterTemperature$ = this.signalKService.filterByDatapoint$('electrical_batteries_starter_current');
+  houseCurrent$ = this.signalKService.filterByDatapoint$('electrical_batteries_house_temperature');
+  starterCurrent$ = this.signalKService.filterByDatapoint$('electrical_batteries_starter_temperature');
+  engineInsideTemperature$ = this.signalKService.filterByDatapoint$('environment_inside_temperature');
+  speedOverGround$ = this.signalKService.filterByDatapoint$('navigation.speedOverGround');
 
-  constructor(private signalKService:SignalKService){}
+  constructor(private signalKService: SignalKService) { }
 
 }
 

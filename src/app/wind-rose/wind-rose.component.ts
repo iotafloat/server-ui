@@ -8,7 +8,7 @@ import { map } from "rxjs/operators";
   styleUrls: ['./wind-rose.component.css']
 })
 export class WindRoseComponent implements OnInit {
-  windDirection$ = this.signalKService.filterByDatapoint$('environment/wind/directionTrue').pipe(
+  windDirection$ = this.signalKService.filterByDatapoint$('environment_wind_directionTrue').pipe(
     map(v => `rotate(${(v?v:0)}deg)`)
   );
 
